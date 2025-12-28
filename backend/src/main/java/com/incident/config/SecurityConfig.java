@@ -54,8 +54,7 @@ public class SecurityConfig {
         configuration.setAllowedOrigins(Arrays.asList(
             "http://localhost:5173",
             "http://localhost:3000",
-            "https://*.vercel.app",
-            "https://resqnow-three.vercel.app/"  // Add your Vercel URL
+            "https://resqnow-three.vercel.app"  // Removed trailing slash and wildcard
         ));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
         configuration.setAllowedHeaders(List.of("*"));
