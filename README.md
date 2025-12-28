@@ -1,3 +1,10 @@
+## Username and password
+#### 1) Admin level
+#### username : admin, password : admin123
+
+#### 2) Responder level
+#### username : responder, password : responder123
+
 # Real-Time Incident Reporting and Resource Coordination Platform
 
 A production-ready, real-time incident reporting and resource coordination platform for emergency management, designed for national-level hackathon demonstrations.
