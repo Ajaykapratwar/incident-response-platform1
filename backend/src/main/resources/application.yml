@@ -1,0 +1,57 @@
+spring:
+  application:
+    name: incident-response-platform
+  
+  datasource:
+    url: jdbc:postgresql://localhost:5432/incident_db
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+  
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+  
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+server:
+  port: ${PORT:8080}
+  error:
+    include-message: always
+    include-binding-errors: always
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:your-256-bit-secret-key-change-in-production-minimum-32-characters}
+    expiration: 86400000 # 24 hours
+  
+  file:
+    upload-dir: ${UPLOAD_DIR:./uploads}
+  
+  duplicate:
+    distance-threshold-meters: 300
+    time-window-minutes: 10
+  
+  confidence:
+    base-score: 30
+    image-bonus: 20
+    confirmation-bonus: 15
+    reputation-bonus-max: 20
+    gps-accuracy-bonus-max: 15
+
+logging:
+  level:
+    com.incident: DEBUG
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+
+
