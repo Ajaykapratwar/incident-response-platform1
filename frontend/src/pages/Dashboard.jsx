@@ -28,7 +28,7 @@ export default function Dashboard() {
       <div className="flex items-center justify-center py-20">
         <div className="text-center">
           <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mb-4"></div>
-          <p className="text-slate-600">Loading dashboard...</p>
+          <p className="text-slate-600">Your project is ready and currently in the queue. Due to an issue on temporary vercel, please allow 3 to 5 minutes.</p>
         </div>
       </div>
     )
